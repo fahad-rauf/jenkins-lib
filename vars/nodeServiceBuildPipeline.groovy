@@ -58,9 +58,7 @@ def call() {
                                 git config user.name "${scmVars.GIT_AUTHOR_NAME}"
                                 git config user.email "${scmVars.GIT_AUTHOR_EMAIL}"
                                 git tag -am "By ${currentBuild.projectName}" v${newVersion}
-                                git push https://${GIT_USERNAME}:${GIT_PASSWORD}@${scmVars.GIT_URL.substring(8)} v${
-                                    newVersion
-                                }
+                                git push https://${GIT_USERNAME}:${GIT_PASSWORD}@${scmVars.GIT_URL.substring(8)} v${newVersion}
                             """
                             }
                             sh "docker push ${newImageName}"
