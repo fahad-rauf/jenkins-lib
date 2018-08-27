@@ -128,7 +128,7 @@ def call(body) {
                                 }
                             }
                             
-                            stage('Running soap integration tests') {
+                            stage('Run soap integration tests') {
                                 echo "Running soap integration tests on mock"
                                 build job: "${soapITJobName}"
                             }
